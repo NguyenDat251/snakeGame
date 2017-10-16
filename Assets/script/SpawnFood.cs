@@ -1,10 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SpawnFood : MonoBehaviour {
     public GameObject foodPrefabs;
     public static bool beEaten;
+
+    public int score = 0;
+    public Text textScore;
 
     public Transform borderLeft;
     public Transform borderRight;
@@ -18,9 +22,12 @@ public class SpawnFood : MonoBehaviour {
     
     // Update is called once per frame
     void Update () {
+        textScore.text = "Score " + score;
 		if(beEaten == true)
         {
             Debug.Log("food die die die");
+
+            score++;
 
             int x = (int)Random.Range(borderLeft.position.x, borderRight.position.x);
             
