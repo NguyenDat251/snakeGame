@@ -19,7 +19,7 @@ public class EatFood : MonoBehaviour {
 		
 	}
 
-    void OnTriggerEnter(Collider other)
+    void OnTriggerExit(Collider other)
     {
         if (other.tag == "food")
         {
