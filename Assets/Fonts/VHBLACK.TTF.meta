@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 48bd6124e5dcdf3499dbf9306982551e
+timeCreated: 1509284473
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: .VnBlackH
+  fontNames:
+  - .VnBlackH
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

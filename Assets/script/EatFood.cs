@@ -6,12 +6,13 @@ public class EatFood : MonoBehaviour {
 
     //public GameObject food;
     public GameObject body;
-    
+    GameObject GameControler;
 
 
     // Use this for initialization
     void Start () {
-        
+        if(GameControler == null)
+            GameControler = GameObject.FindGameObjectWithTag("GameController");
     }
 	
 	// Update is called once per frame
@@ -31,6 +32,9 @@ public class EatFood : MonoBehaviour {
             Debug.Log("Ate");
         }
         if (other.tag == "body")
+        {
             Debug.Log("Die");
+            GameControler.GetComponent<GameController>().EndGame();
+        }
     }
 }

@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/gh.unity
+- path: Assets/scene/gh.unity
   isLoaded: 1
   isActive: 1
