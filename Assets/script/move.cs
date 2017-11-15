@@ -5,23 +5,22 @@ using UnityEngine;
 
 public class move : MonoBehaviour {
 
-    public float distance = 1f;
+    public float distance;
 
-    public float time = 1f;
+    public float time;
 
     public GameObject cube;
 
     public Transform cube2;
     public Transform cube3;
 
-    private bool paused;
+    public bool paused;
 
     private Vector3 newBodyPos;
 
     private int bodyCount = 0;
 
     public static List<Transform> bodyPart;
-    //public static List<string> dirBody;
 
     private float smooth = 5f;
 
@@ -37,9 +36,7 @@ public class move : MonoBehaviour {
         smooth = snakeDirection.smooth;
         bodyPart = new List<Transform>();
         bodyPart.Add(cube2);
-        //dirBody.Add("front");
         bodyPart.Add(cube3);
-        //dirBody.Add("front");
     }
 
     // Update is called once per frame
@@ -67,7 +64,6 @@ public class move : MonoBehaviour {
                 bodyPart[0].rotation = this.transform.rotation;
                 didChance = true;
             }
-                //bodyPart[0].rotation = Quaternion.Lerp(transform.rotation, SnakeDirection.targetRotation, 10 * smooth * Time.deltaTime);
             bodyPart[0].position = headPos;
 
             int i = 1;
@@ -78,7 +74,6 @@ public class move : MonoBehaviour {
                 {
                     bodyPart[i].rotation = bodyPart[i - 1].rotation;
                     didChance = true;
-                    //bodyPart[i].rotation = Quaternion.Lerp(transform.rotation, SnakeDirection.targetRotation, 10 * smooth * Time.deltaTime);
                 }
 
                 secondPos = bodyPart[i].position;
@@ -92,7 +87,7 @@ public class move : MonoBehaviour {
        StartCoroutine(Pause());
     }
 
-    private IEnumerator Pause()
+    public IEnumerator Pause()
     {
         paused = true;
         yield return new WaitForSeconds(time);

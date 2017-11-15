@@ -8,6 +8,8 @@ TagManager:
   - dat
   - food
   - body
+  - rock
+  - move
   layers:
   - Default
   - TransparentFX

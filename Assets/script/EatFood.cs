@@ -20,7 +20,7 @@ public class EatFood : MonoBehaviour {
 		
 	}
 
-    void OnTriggerExit(Collider other)
+    void OnTriggerEnter(Collider other)
     {
         if (other.tag == "food")
         {
@@ -31,7 +31,7 @@ public class EatFood : MonoBehaviour {
             move.bodyPart.Add(g.transform);
             Debug.Log("Ate");
         }
-        if (other.tag == "body")
+        if (other.tag == "body" || other.tag == "rock")
         {
             Debug.Log("Die");
             GameControler.GetComponent<GameController>().EndGame();

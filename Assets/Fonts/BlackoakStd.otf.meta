@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: f377870ac3a71b642a08ada8f57a2fda
+timeCreated: 1509469488
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Blackoak Std
+  fontNames:
+  - Blackoak Std
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
